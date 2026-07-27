@@ -1,0 +1,5216 @@
+{
+  "repository": "https://github.com/codejsha/spring-rest-sakila.git",
+  "analysis_strategy": {
+    "included_extensions": [
+      ".gradle",
+      ".java",
+      ".md",
+      ".properties",
+      ".xml",
+      ".yaml",
+      ".yml"
+    ],
+    "max_tokens_per_chunk": 3500,
+    "chunk_count": 39,
+    "token_estimation": "Approximate: 1 token per 4 characters.",
+    "llm_model": "gpt-4o-mini",
+    "llm_status": "not_requested",
+    "llm_chunk_limit": 0
+  },
+  "project_overview": {
+    "name": "spring-rest-sakila",
+    "purpose": "Spring Boot REST API for accessing and exposing Sakila sample database resources.",
+    "technology_stack": [
+      "Java",
+      "Spring Boot",
+      "Spring Data JPA",
+      "Spring HATEOAS",
+      "QueryDSL",
+      "Maven/Gradle"
+    ],
+    "file_count": 210,
+    "java_file_count": 200,
+    "key_areas": {
+      "controllers": [
+        "src/main/java/com/example/app/services/auth/controller/LoginController.java",
+        "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+        "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+        "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+        "src/main/java/com/example/app/services/location/controller/LocationController.java",
+        "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+        "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+        "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+        "src/main/java/com/example/app/services/store/controller/StoreController.java",
+        "src/test/java/com/example/app/config/RestDocsControllerSupport.java"
+      ],
+      "repositories": [
+        "src/main/java/com/example/app/services/auth/repository/AuthorityRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/ActorRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/CategoryRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/FilmActorRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/FilmCategoryRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/FilmRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/FilmTextRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepository.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepositoryImpl.java",
+        "src/main/java/com/example/app/services/catalog/repository/custom/RentalRateProjection.java",
+        "src/main/java/com/example/app/services/customer/repository/CustomerRepository.java",
+        "src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepository.java",
+        "src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepositoryImpl.java",
+        "src/main/java/com/example/app/services/location/repository/AddressRepository.java",
+        "src/main/java/com/example/app/services/location/repository/CityRepository.java",
+        "src/main/java/com/example/app/services/location/repository/CountryRepository.java",
+        "src/main/java/com/example/app/services/location/repository/LanguageRepository.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomAddressRepository.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomAddressRepositoryImpl.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomCityRepository.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomCityRepositoryImpl.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomCountryRepository.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomCountryRepositoryImpl.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomLanguageRepository.java",
+        "src/main/java/com/example/app/services/location/repository/custom/CustomLanguageRepositoryImpl.java",
+        "src/main/java/com/example/app/services/payment/repository/PaymentRepository.java",
+        "src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepository.java",
+        "src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepositoryImpl.java",
+        "src/main/java/com/example/app/services/rental/repository/RentalRepository.java",
+        "src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepository.java",
+        "src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepositoryImpl.java",
+        "src/main/java/com/example/app/services/staff/repository/StaffRepository.java",
+        "src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepository.java",
+        "src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepositoryImpl.java",
+        "src/main/java/com/example/app/services/store/repository/InventoryRepository.java",
+        "src/main/java/com/example/app/services/store/repository/StoreRepository.java",
+        "src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepository.java",
+        "src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepositoryImpl.java",
+        "src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepository.java",
+        "src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepositoryImpl.java"
+      ],
+      "domain_entities": [
+        "src/main/java/com/example/app/common/domain/entity/FullName.java",
+        "src/main/java/com/example/app/services/auth/domain/entity/AuthorityEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntityPK.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntityPK.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+        "src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+        "src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+        "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+        "src/main/java/com/example/app/services/location/domain/entity/CityEntity.java",
+        "src/main/java/com/example/app/services/location/domain/entity/CountryEntity.java",
+        "src/main/java/com/example/app/services/location/domain/entity/LanguageEntity.java",
+        "src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+        "src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+        "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+        "src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+        "src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java"
+      ]
+    },
+    "endpoint_count": 80,
+    "class_count": 265
+  },
+  "classes": [
+    {
+      "file": "src/test/java/com/example/app/config/PropertyConfig.java",
+      "name": "PropertyConfig",
+      "annotations": [
+        "TestConfiguration",
+        "ConfigurationPropertiesScan"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/test/java/com/example/app/config/RestDocsControllerSupport.java",
+      "name": "RestDocsControllerSupport",
+      "annotations": [
+        "WebMvcTest",
+        "EnableConfigurationProperties",
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 25
+    },
+    {
+      "file": "src/test/java/com/example/app/util/ConstrainedFieldAttribute.java",
+      "name": "ConstrainedFieldAttribute",
+      "annotations": [
+        "RequiredArgsConstructor"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/test/java/com/example/app/util/ConstrainedFieldDocumentation.java",
+      "name": "ConstrainedFieldDocumentation",
+      "annotations": [
+        "RequiredArgsConstructor"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/test/java/com/example/app/util/OpenApiDescriptorTransformer.java",
+      "name": "OpenApiDescriptorTransformer",
+      "annotations": [],
+      "line": 14
+    },
+    {
+      "file": "src/test/java/com/example/app/services/location/domain/converter/CountryConverterTest.java",
+      "name": "CountryConverterTest",
+      "annotations": [
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/test/java/com/example/app/services/location/domain/converter/LanguageConverterTest.java",
+      "name": "LanguageConverterTest",
+      "annotations": [
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorControllerTest",
+      "annotations": [],
+      "line": 62
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorListTests",
+      "annotations": [
+        "Nested"
+      ],
+      "line": 74
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorUpdateTests",
+      "annotations": [
+        "Nested"
+      ],
+      "line": 220
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorDetailsTests",
+      "annotations": [
+        "Nested"
+      ],
+      "line": 380
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorFilmTests",
+      "annotations": [
+        "Nested"
+      ],
+      "line": 453
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/controller/ActorControllerTest.java",
+      "name": "ActorFilmDetailsTests",
+      "annotations": [
+        "Nested"
+      ],
+      "line": 710
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/domain/converter/CategoryConverterTest.java",
+      "name": "CategoryConverterTest",
+      "annotations": [
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/domain/converter/FilmRatingConverterTest.java",
+      "name": "FilmRatingConverterTest",
+      "annotations": [
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/test/java/com/example/app/services/catalog/domain/converter/SpecialFeatureConverterTest.java",
+      "name": "SpecialFeatureConverterTest",
+      "annotations": [
+        "ExtendWith",
+        "Slf4j"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/test/java/com/example/app/config/properties/AppUriPropConfig.java",
+      "name": "AppUriPropConfig",
+      "annotations": [
+        "ConfigurationProperties",
+        "Getter",
+        "ToString",
+        "RequiredArgsConstructor"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/SpringRestSakilaApplication.java",
+      "name": "SpringRestSakilaApplication",
+      "annotations": [
+        "SpringBootApplication"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/config/AuthConfig.java",
+      "name": "AuthConfig",
+      "annotations": [
+        "Configuration",
+        "RequiredArgsConstructor"
+      ],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/config/LoggingFilterConfig.java",
+      "name": "LoggingFilterConfig",
+      "annotations": [
+        "Configuration"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "name": "PersistenceConfig",
+      "annotations": [
+        "Configuration",
+        "EnableJpaRepositories"
+      ],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/config/RedisConfig.java",
+      "name": "RedisConfig",
+      "annotations": [
+        "Configuration",
+        "EnableCaching"
+      ],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/config/SecurityFilterConfig.java",
+      "name": "SecurityFilterConfig",
+      "annotations": [
+        "Configuration",
+        "RequiredArgsConstructor",
+        "EnableMethodSecurity"
+      ],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/assembler/CategorySalesRepresentationModelAssembler.java",
+      "name": "CategorySalesRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/assembler/StoreDetailsRepresentationModelAssembler.java",
+      "name": "StoreDetailsRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/assembler/StoreRepresentationModelAssembler.java",
+      "name": "StoreRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/assembler/StoreSalesRepresentationModelAssembler.java",
+      "name": "StoreSalesRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/ReportController.java",
+      "name": "ReportController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "name": "StoreController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 23
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/InventoryRepository.java",
+      "name": "InventoryRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/StoreRepository.java",
+      "name": "StoreRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/ReportService.java",
+      "name": "ReportService",
+      "annotations": [],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/ReportServiceImpl.java",
+      "name": "ReportServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/StoreService.java",
+      "name": "StoreService",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/StoreServiceImpl.java",
+      "name": "StoreServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepository.java",
+      "name": "CustomInventoryRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/custom/CustomInventoryRepositoryImpl.java",
+      "name": "CustomInventoryRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepository.java",
+      "name": "CustomStoreRepository",
+      "annotations": [],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepositoryImpl.java",
+      "name": "CustomStoreRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "name": "CategorySalesDto",
+      "annotations": [],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "name": "CategorySales",
+      "annotations": [],
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "name": "CategorySalesResponse",
+      "annotations": [],
+      "line": 65
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/InventoryDto.java",
+      "name": "InventoryDto",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/InventoryDto.java",
+      "name": "Inventory",
+      "annotations": [],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "name": "StoreDetailsDto",
+      "annotations": [],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "name": "StoreDetails",
+      "annotations": [],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "name": "StoreDetailsResponse",
+      "annotations": [],
+      "line": 59
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "name": "StoreDto",
+      "annotations": [],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "name": "Store",
+      "annotations": [],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "name": "StoreRequest",
+      "annotations": [],
+      "line": 73
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "name": "StoreResponse",
+      "annotations": [],
+      "line": 105
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "name": "StoreSalesDto",
+      "annotations": [],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "name": "StoreSales",
+      "annotations": [],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "name": "StoreSalesResponse",
+      "annotations": [],
+      "line": 68
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+      "name": "InventoryEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java",
+      "name": "StoreEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/mapper/InventoryMapper.java",
+      "name": "InventoryMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/mapper/StoreMapper.java",
+      "name": "StoreMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/assembler/StaffDetailsRepresentationModelAssembler.java",
+      "name": "StaffDetailsRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/assembler/StaffRepresentationModelAssembler.java",
+      "name": "StaffRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "name": "StaffController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/repository/StaffRepository.java",
+      "name": "StaffRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/service/StaffService.java",
+      "name": "StaffService",
+      "annotations": [],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/service/StaffServiceImpl.java",
+      "name": "StaffServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepository.java",
+      "name": "CustomStaffRepository",
+      "annotations": [],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/repository/custom/CustomStaffRepositoryImpl.java",
+      "name": "CustomStaffRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 19
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "name": "StaffDetailsDto",
+      "annotations": [],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "name": "StaffDetails",
+      "annotations": [],
+      "line": 28
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "name": "StaffDetailsResponse",
+      "annotations": [],
+      "line": 106
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "name": "StaffDto",
+      "annotations": [],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "name": "Staff",
+      "annotations": [],
+      "line": 30
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "name": "StaffRequest",
+      "annotations": [],
+      "line": 107
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "name": "StaffResponse",
+      "annotations": [],
+      "line": 165
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+      "name": "StaffEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/mapper/StaffMapper.java",
+      "name": "StaffMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/assembler/RentalRepresentationModelAssembler.java",
+      "name": "RentalRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "name": "RentalController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/repository/RentalRepository.java",
+      "name": "RentalRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/service/RentalService.java",
+      "name": "RentalService",
+      "annotations": [],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/service/RentalServiceImpl.java",
+      "name": "RentalServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepository.java",
+      "name": "CustomRentalRepository",
+      "annotations": [],
+      "line": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepositoryImpl.java",
+      "name": "CustomRentalRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "RentalDto",
+      "annotations": [],
+      "line": 19
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "Rental",
+      "annotations": [],
+      "line": 27
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "RentalCreateRequest",
+      "annotations": [],
+      "line": 92
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "RentalUpdateRequest",
+      "annotations": [],
+      "line": 136
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "ReturnCreateRequest",
+      "annotations": [],
+      "line": 180
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "name": "RentalResponse",
+      "annotations": [],
+      "line": 201
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+      "name": "RentalEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/mapper/RentalMapper.java",
+      "name": "RentalMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/vo/RentalStatus.java",
+      "name": "RentalStatus",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/assembler/PaymentRepresentationModelAssembler.java",
+      "name": "PaymentRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "name": "PaymentController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/repository/PaymentRepository.java",
+      "name": "PaymentRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/service/PaymentService.java",
+      "name": "PaymentService",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/service/PaymentServiceImpl.java",
+      "name": "PaymentServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepository.java",
+      "name": "CustomPaymentRepository",
+      "annotations": [],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepositoryImpl.java",
+      "name": "CustomPaymentRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "name": "PaymentDto",
+      "annotations": [],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "name": "Payment",
+      "annotations": [],
+      "line": 28
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "name": "PaymentRequest",
+      "annotations": [],
+      "line": 93
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "name": "PaymentResponse",
+      "annotations": [],
+      "line": 137
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+      "name": "PaymentEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 24
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/mapper/PaymentMapper.java",
+      "name": "PaymentMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/assembler/AddressRepresentationModelAssembler.java",
+      "name": "AddressRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/assembler/CityRepresentationModelAssembler.java",
+      "name": "CityRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "name": "LocationController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/AddressRepository.java",
+      "name": "AddressRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/CityRepository.java",
+      "name": "CityRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/CountryRepository.java",
+      "name": "CountryRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/LanguageRepository.java",
+      "name": "LanguageRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/service/LocationService.java",
+      "name": "LocationService",
+      "annotations": [],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/service/LocationServiceImpl.java",
+      "name": "LocationServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomAddressRepository.java",
+      "name": "CustomAddressRepository",
+      "annotations": [],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomAddressRepositoryImpl.java",
+      "name": "CustomAddressRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomCityRepository.java",
+      "name": "CustomCityRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomCityRepositoryImpl.java",
+      "name": "CustomCityRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomCountryRepository.java",
+      "name": "CustomCountryRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomCountryRepositoryImpl.java",
+      "name": "CustomCountryRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomLanguageRepository.java",
+      "name": "CustomLanguageRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/repository/custom/CustomLanguageRepositoryImpl.java",
+      "name": "CustomLanguageRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/CountryConverter.java",
+      "name": "CountryConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/GeometryConverter.java",
+      "name": "GeometryConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/LanguageConverter.java",
+      "name": "LanguageConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "name": "AddressDto",
+      "annotations": [],
+      "line": 19
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "name": "Address",
+      "annotations": [],
+      "line": 27
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "name": "AddressRequest",
+      "annotations": [],
+      "line": 96
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "name": "AddressResponse",
+      "annotations": [],
+      "line": 154
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "name": "CityDto",
+      "annotations": [],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "name": "City",
+      "annotations": [],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "name": "CityRequest",
+      "annotations": [],
+      "line": 69
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "name": "CityResponse",
+      "annotations": [],
+      "line": 102
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CountryDto.java",
+      "name": "CountryDto",
+      "annotations": [],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CountryDto.java",
+      "name": "Country",
+      "annotations": [],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/LanguageDto.java",
+      "name": "LanguageDto",
+      "annotations": [],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/LanguageDto.java",
+      "name": "Language",
+      "annotations": [],
+      "line": 19
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+      "name": "AddressEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CityEntity.java",
+      "name": "CityEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CountryEntity.java",
+      "name": "CountryEntity",
+      "annotations": [
+        "Entity",
+        "Table",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/LanguageEntity.java",
+      "name": "LanguageEntity",
+      "annotations": [
+        "Entity",
+        "Table",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/mapper/AddressMapper.java",
+      "name": "AddressMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/mapper/CityMapper.java",
+      "name": "CityMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/assembler/CustomerDetailsRepresentationModelAssembler.java",
+      "name": "CustomerDetailsRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/assembler/CustomerRepresentationModelAssembler.java",
+      "name": "CustomerRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "name": "CustomerController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/repository/CustomerRepository.java",
+      "name": "CustomerRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/service/CustomerService.java",
+      "name": "CustomerService",
+      "annotations": [],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/service/CustomerServiceImpl.java",
+      "name": "CustomerServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepository.java",
+      "name": "CustomCustomerRepository",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/repository/custom/CustomCustomerRepositoryImpl.java",
+      "name": "CustomCustomerRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "name": "CustomerDetailsDto",
+      "annotations": [],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "name": "CustomerDetails",
+      "annotations": [],
+      "line": 28
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "name": "CustomerDetailsResponse",
+      "annotations": [],
+      "line": 113
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "name": "CustomerDto",
+      "annotations": [],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "name": "Customer",
+      "annotations": [],
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "name": "CustomerRequest",
+      "annotations": [],
+      "line": 97
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "name": "CustomerResponse",
+      "annotations": [],
+      "line": 145
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+      "name": "CustomerEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/mapper/CustomerMapper.java",
+      "name": "CustomerMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/assembler/ActorDetailsRepresentationModelAssembler.java",
+      "name": "ActorDetailsRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/assembler/ActorRepresentationModelAssembler.java",
+      "name": "ActorRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/assembler/FilmDetailsRepresentationModelAssembler.java",
+      "name": "FilmDetailsRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/assembler/FilmRepresentationModelAssembler.java",
+      "name": "FilmRepresentationModelAssembler",
+      "annotations": [
+        "Component"
+      ],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "name": "ActorController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 31
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "name": "FilmController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 28
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/ActorRepository.java",
+      "name": "ActorRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/CategoryRepository.java",
+      "name": "CategoryRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/FilmActorRepository.java",
+      "name": "FilmActorRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/FilmCategoryRepository.java",
+      "name": "FilmCategoryRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/FilmRepository.java",
+      "name": "FilmRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/FilmTextRepository.java",
+      "name": "FilmTextRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/ActorService.java",
+      "name": "ActorService",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/ActorServiceImpl.java",
+      "name": "ActorServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/FilmService.java",
+      "name": "FilmService",
+      "annotations": [],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/FilmServiceImpl.java",
+      "name": "FilmServiceImpl",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepository.java",
+      "name": "CustomActorRepository",
+      "annotations": [],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepositoryImpl.java",
+      "name": "CustomActorRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepository.java",
+      "name": "CustomCategoryRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomCategoryRepositoryImpl.java",
+      "name": "CustomCategoryRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepository.java",
+      "name": "CustomFilmActorRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmActorRepositoryImpl.java",
+      "name": "CustomFilmActorRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepository.java",
+      "name": "CustomFilmCategoryRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmCategoryRepositoryImpl.java",
+      "name": "CustomFilmCategoryRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepository.java",
+      "name": "CustomFilmRepository",
+      "annotations": [],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmRepositoryImpl.java",
+      "name": "CustomFilmRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 27
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepository.java",
+      "name": "CustomFilmTextRepository",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomFilmTextRepositoryImpl.java",
+      "name": "CustomFilmTextRepositoryImpl",
+      "annotations": [
+        "Repository",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/RentalRateProjection.java",
+      "name": "RentalRateProjection",
+      "annotations": [],
+      "line": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/CategoryConverter.java",
+      "name": "CategoryConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/FilmRatingConverter.java",
+      "name": "FilmRatingConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/SpecialFeatureConverter.java",
+      "name": "SpecialFeatureConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "name": "ActorDetailsDto",
+      "annotations": [],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "name": "ActorDetails",
+      "annotations": [],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "name": "ActorDetailsResponse",
+      "annotations": [],
+      "line": 74
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "name": "ActorDto",
+      "annotations": [],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "name": "Actor",
+      "annotations": [],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "name": "ActorRequest",
+      "annotations": [],
+      "line": 59
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "name": "ActorResponse",
+      "annotations": [],
+      "line": 91
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/CategoryDto.java",
+      "name": "CategoryDto",
+      "annotations": [],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/CategoryDto.java",
+      "name": "Category",
+      "annotations": [],
+      "line": 21
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "name": "FilmDetailsDto",
+      "annotations": [],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "name": "FilmDetails",
+      "annotations": [],
+      "line": 31
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "name": "FilmDetailsResponse",
+      "annotations": [],
+      "line": 110
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmDto",
+      "annotations": [],
+      "line": 31
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "Film",
+      "annotations": [],
+      "line": 39
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmRequest",
+      "annotations": [],
+      "line": 127
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmResponse",
+      "annotations": [],
+      "line": 198
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmCategory",
+      "annotations": [],
+      "line": 227
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmActor",
+      "annotations": [],
+      "line": 271
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilmText",
+      "annotations": [],
+      "line": 314
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "name": "FilterOption",
+      "annotations": [],
+      "line": 349
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+      "name": "ActorEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 20
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+      "name": "CategoryEntity",
+      "annotations": [
+        "Entity",
+        "Table",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+      "name": "FilmActorEntity",
+      "annotations": [
+        "IdClass",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 19
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntityPK.java",
+      "name": "FilmActorEntityPK",
+      "annotations": [
+        "Getter",
+        "ToString"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+      "name": "FilmCategoryEntity",
+      "annotations": [
+        "Entity",
+        "Table",
+        "IdClass",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntityPK.java",
+      "name": "FilmCategoryEntityPK",
+      "annotations": [
+        "Getter",
+        "ToString"
+      ],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+      "name": "FilmEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 32
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+      "name": "FilmTextEntity",
+      "annotations": [
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/mapper/ActorMapper.java",
+      "name": "ActorMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/mapper/FilmMapper.java",
+      "name": "FilmMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+      "name": "LocalDateYearSerializer",
+      "annotations": [],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/controller/LoginController.java",
+      "name": "LoginController",
+      "annotations": [
+        "RestController",
+        "RequestMapping",
+        "RequiredArgsConstructor"
+      ],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/repository/AuthorityRepository.java",
+      "name": "AuthorityRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/service/JpaUserDetailsService.java",
+      "name": "JpaUserDetailsService",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/service/SecurityService.java",
+      "name": "SecurityService",
+      "annotations": [
+        "Service",
+        "RequiredArgsConstructor"
+      ],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/converter/UserRoleConverter.java",
+      "name": "UserRoleConverter",
+      "annotations": [
+        "Converter"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "name": "AuthorityDto",
+      "annotations": [],
+      "line": 15
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "name": "Authority",
+      "annotations": [],
+      "line": 23
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "name": "User",
+      "annotations": [],
+      "line": 60
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "name": "Login",
+      "annotations": [],
+      "line": 94
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/entity/AuthorityEntity.java",
+      "name": "AuthorityEntity",
+      "annotations": [
+        "Entity",
+        "Table",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/vo/UserRole.java",
+      "name": "UserRole",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/vo/UserRole.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Category.java",
+      "name": "Category",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Category.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 42
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Country.java",
+      "name": "Country",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Country.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 151
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/ErrorCode.java",
+      "name": "ErrorCode",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/ErrorLevel.java",
+      "name": "ErrorLevel",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/FilmRating.java",
+      "name": "FilmRating",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/FilmRating.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 26
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/HalRelation.java",
+      "name": "HalRelation",
+      "annotations": [
+        "FieldNameConstants",
+        "NoArgsConstructor"
+      ],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Language.java",
+      "name": "Language",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Language.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 30
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/SpecialFeature.java",
+      "name": "SpecialFeature",
+      "annotations": [
+        "Getter",
+        "RequiredArgsConstructor"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/SpecialFeature.java",
+      "name": "Constants",
+      "annotations": [],
+      "line": 24
+    },
+    {
+      "file": "src/main/java/com/example/app/common/exception/GlobalExceptionHandler.java",
+      "name": "GlobalExceptionHandler",
+      "annotations": [
+        "ControllerAdvice",
+        "Slf4j"
+      ],
+      "line": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/common/exception/ResourceNotAvailableException.java",
+      "name": "ResourceNotAvailableException",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/exception/ResourceNotFoundException.java",
+      "name": "ResourceNotFoundException",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/filter/MdcLoggingFilter.java",
+      "name": "MdcLoggingFilter",
+      "annotations": [],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationFilter.java",
+      "name": "JwtAuthenticationFilter",
+      "annotations": [
+        "Component",
+        "RequiredArgsConstructor"
+      ],
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationProvider.java",
+      "name": "JwtAuthenticationProvider",
+      "annotations": [
+        "Component",
+        "RequiredArgsConstructor"
+      ],
+      "line": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationToken.java",
+      "name": "JwtAuthenticationToken",
+      "annotations": [
+        "Getter"
+      ],
+      "line": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtTokenProvider.java",
+      "name": "JwtTokenProvider",
+      "annotations": [
+        "Component",
+        "RequiredArgsConstructor"
+      ],
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "name": "ExpressionUtils",
+      "annotations": [],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/dto/ErrorResponseDto.java",
+      "name": "ErrorResponseDto",
+      "annotations": [],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/dto/FullName.java",
+      "name": "FullName",
+      "annotations": [
+        "Getter",
+        "Setter",
+        "ToString",
+        "FieldNameConstants",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/dto/NullCheckable.java",
+      "name": "NullCheckable",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/dto/Updatable.java",
+      "name": "Updatable",
+      "annotations": [],
+      "line": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/entity/FullName.java",
+      "name": "FullName",
+      "annotations": [
+        "Embeddable",
+        "Getter",
+        "ToString",
+        "Builder",
+        "NoArgsConstructor",
+        "AllArgsConstructor"
+      ],
+      "line": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/mapper/DoMapping.java",
+      "name": "DoMapping",
+      "annotations": [],
+      "line": 13
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/mapper/FullNameMapper.java",
+      "name": "FullNameMapper",
+      "annotations": [
+        "Mapper"
+      ],
+      "line": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/mapper/GenericMapper.java",
+      "name": "GenericMapper",
+      "annotations": [],
+      "line": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+      "name": "NullToEmptyStringSerializer",
+      "annotations": [],
+      "line": 19
+    }
+  ],
+  "api_endpoints": [
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/ReportController.java",
+      "annotation": "RequestMapping",
+      "path": "/reports",
+      "line": 18
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/ReportController.java",
+      "annotation": "GetMapping",
+      "path": "/sales/categories",
+      "line": 25
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/ReportController.java",
+      "annotation": "GetMapping",
+      "path": "/sales/stores",
+      "line": 32
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "RequestMapping",
+      "path": "/stores",
+      "line": 24
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 32
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 40
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "GetMapping",
+      "path": "/{storeId}",
+      "line": 48
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "PutMapping",
+      "path": "/{storeId}",
+      "line": 57
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{storeId}",
+      "line": 65
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "GetMapping",
+      "path": "/{storeId}/staffs",
+      "line": 72
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "GetMapping",
+      "path": "/{storeId}/staffs/{staffId}",
+      "line": 79
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "PostMapping",
+      "path": "/{storeId}/staffs/{staffId}",
+      "line": 89
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "PutMapping",
+      "path": "/{storeId}/staffs/{staffId}",
+      "line": 97
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{storeId}/staffs/{staffId}",
+      "line": 105
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "annotation": "GetMapping",
+      "path": "/{storeId}/details",
+      "line": 113
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "RequestMapping",
+      "path": "/staffs",
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 37
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "GetMapping",
+      "path": "/{staffId}",
+      "line": 45
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "PutMapping",
+      "path": "/{staffId}",
+      "line": 54
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{staffId}",
+      "line": 62
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "annotation": "GetMapping",
+      "path": "/{staffId}/details",
+      "line": 69
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "RequestMapping",
+      "path": "/rentals",
+      "line": 23
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 37
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "GetMapping",
+      "path": "/{rentalId}",
+      "line": 48
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "PutMapping",
+      "path": "/{rentalId}",
+      "line": 57
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{rentalId}",
+      "line": 65
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "annotation": "PutMapping",
+      "path": "/return",
+      "line": 72
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "RequestMapping",
+      "path": "/payments",
+      "line": 17
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 23
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "GetMapping",
+      "path": "/{paymentId}",
+      "line": 31
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "PutMapping",
+      "path": "/{paymentId}",
+      "line": 40
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{paymentId}",
+      "line": 48
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "annotation": "GetMapping",
+      "path": "/{paymentId}/details",
+      "line": 55
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "RequestMapping",
+      "path": "/location",
+      "line": 22
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "GetMapping",
+      "path": "/addresses",
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "PostMapping",
+      "path": "/addresses",
+      "line": 37
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "GetMapping",
+      "path": "/addresses/{addressId}",
+      "line": 45
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "PutMapping",
+      "path": "/addresses/{addressId}",
+      "line": 54
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "DeleteMapping",
+      "path": "/addresses/{addressId}",
+      "line": 62
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "GetMapping",
+      "path": "/addresses/{addressId}/details",
+      "line": 69
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "GetMapping",
+      "path": "/cities",
+      "line": 78
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "PostMapping",
+      "path": "/cities",
+      "line": 86
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "GetMapping",
+      "path": "/cities/{cityId}",
+      "line": 94
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "PutMapping",
+      "path": "/cities/{cityId}",
+      "line": 103
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "annotation": "DeleteMapping",
+      "path": "/cities/{cityId}",
+      "line": 111
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "RequestMapping",
+      "path": "/customers",
+      "line": 27
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 36
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 44
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "GetMapping",
+      "path": "/{customerId}",
+      "line": 52
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "PutMapping",
+      "path": "/{customerId}",
+      "line": 61
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{customerId}",
+      "line": 69
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "GetMapping",
+      "path": "/{customerId}/details",
+      "line": 76
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "GetMapping",
+      "path": "/{customerId}/payments",
+      "line": 86
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "annotation": "GetMapping",
+      "path": "/{customerId}/rentals",
+      "line": 96
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "RequestMapping",
+      "path": "/actors",
+      "line": 32
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 41
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 49
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/{actorId}",
+      "line": 57
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "PutMapping",
+      "path": "/{actorId}",
+      "line": 66
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{actorId}",
+      "line": 74
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/{actorId}/details",
+      "line": 81
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/{actorId}/films",
+      "line": 90
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "PostMapping",
+      "path": "/{actorId}/films",
+      "line": 112
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/{actorId}/films/{filmId}",
+      "line": 121
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{actorId}/films/{filmId}",
+      "line": 136
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "GetMapping",
+      "path": "/{actorId}/films/{filmId}/details",
+      "line": 144
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "annotation": "PostMapping",
+      "path": "/search",
+      "line": 160
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "RequestMapping",
+      "path": "/films",
+      "line": 29
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "GetMapping",
+      "path": "/",
+      "line": 38
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 54
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "GetMapping",
+      "path": "/{filmId}",
+      "line": 62
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "PutMapping",
+      "path": "/{filmId}",
+      "line": 71
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "DeleteMapping",
+      "path": "/{filmId}",
+      "line": 79
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "GetMapping",
+      "path": "/{filmId}/actors",
+      "line": 86
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "GetMapping",
+      "path": "/{filmId}/actors/{actorId}",
+      "line": 95
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "annotation": "GetMapping",
+      "path": "/{filmId}/details",
+      "line": 105
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/controller/LoginController.java",
+      "annotation": "RequestMapping",
+      "path": "/login",
+      "line": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/controller/LoginController.java",
+      "annotation": "PostMapping",
+      "path": "/",
+      "line": 23
+    }
+  ],
+  "methods": [
+    {
+      "file": "src/test/java/com/example/app/config/RestDocsControllerSupport.java",
+      "signature": "protected String getMessageSourceMessage(@NotNull String code)",
+      "name": "getMessageSourceMessage",
+      "start_line": 63,
+      "end_line": 65,
+      "description": "Retrieves message source message.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/test/java/com/example/app/util/ConstrainedFieldDocumentation.java",
+      "signature": "public List<FieldDescriptor> restdocsFields(List<FieldDescriptor> requestFieldList)",
+      "name": "restdocsFields",
+      "start_line": 14,
+      "end_line": 22,
+      "description": "Implements restdocs fields.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/test/java/com/example/app/util/ConstrainedFieldDocumentation.java",
+      "signature": "public List<FieldDescriptor> openapiFields(List<FieldDescriptor> requestFieldList)",
+      "name": "openapiFields",
+      "start_line": 24,
+      "end_line": 44,
+      "description": "Implements openapi fields.",
+      "cyclomatic_complexity": 3
+    },
+    {
+      "file": "src/test/java/com/example/app/util/OpenApiDescriptorTransformer.java",
+      "signature": "public static List<HeaderDescriptorWithType> transformHeader(List<HeaderDescriptor> descriptorList)",
+      "name": "transformHeader",
+      "start_line": 15,
+      "end_line": 19,
+      "description": "Implements transform header.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/test/java/com/example/app/util/OpenApiDescriptorTransformer.java",
+      "signature": "public static List<ParameterDescriptorWithType> transformParameter(List<ParameterDescriptor> descriptorList)",
+      "name": "transformParameter",
+      "start_line": 21,
+      "end_line": 25,
+      "description": "Implements transform parameter.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/SpringRestSakilaApplication.java",
+      "signature": "public static void main(String[] args)",
+      "name": "main",
+      "start_line": 8,
+      "end_line": 10,
+      "description": "Implements main.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/AuthConfig.java",
+      "signature": "public PasswordEncoder passwordEncoder()",
+      "name": "passwordEncoder",
+      "start_line": 18,
+      "end_line": 20,
+      "description": "Implements password encoder.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/AuthConfig.java",
+      "signature": "public AuthenticationManager authenticationManager()",
+      "name": "authenticationManager",
+      "start_line": 23,
+      "end_line": 25,
+      "description": "Implements authentication manager.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/LoggingFilterConfig.java",
+      "signature": "public MdcLoggingFilter mdcLoggingFilter()",
+      "name": "mdcLoggingFilter",
+      "start_line": 14,
+      "end_line": 16,
+      "description": "Implements mdc logging filter.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/LoggingFilterConfig.java",
+      "signature": "public CommonsRequestLoggingFilter commonsRequestLoggingFilter()",
+      "name": "commonsRequestLoggingFilter",
+      "start_line": 19,
+      "end_line": 27,
+      "description": "Implements commons request logging filter.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "signature": "public JPAQueryFactory jpaQueryFactory()",
+      "name": "jpaQueryFactory",
+      "start_line": 43,
+      "end_line": 45,
+      "description": "Implements jpa query factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "signature": "public SQLQueryFactory sqlQueryFactory(DataSource dataSource)",
+      "name": "sqlQueryFactory",
+      "start_line": 48,
+      "end_line": 51,
+      "description": "Implements sql query factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "signature": "public MySQLQueryFactory mysqlQueryFactory(DataSource dataSource)",
+      "name": "mysqlQueryFactory",
+      "start_line": 54,
+      "end_line": 57,
+      "description": "Implements mysql query factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "signature": "public BlazeJPAQueryFactory blazeJPAQueryFactory()",
+      "name": "blazeJPAQueryFactory",
+      "start_line": 68,
+      "end_line": 70,
+      "description": "Implements blaze jpaquery factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/PersistenceConfig.java",
+      "signature": "public CriteriaBuilderFactory criteriaBuilderFactory()",
+      "name": "criteriaBuilderFactory",
+      "start_line": 73,
+      "end_line": 76,
+      "description": "Implements criteria builder factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/RedisConfig.java",
+      "signature": "public RedisConnectionFactory redisConnectionFactory(RedisProperties redisProperties)",
+      "name": "redisConnectionFactory",
+      "start_line": 26,
+      "end_line": 30,
+      "description": "Implements redis connection factory.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/RedisConfig.java",
+      "signature": "public RedisTemplate<?, ?> redisTemplate(RedisConnectionFactory redisConnectionFactory)",
+      "name": "redisTemplate",
+      "start_line": 33,
+      "end_line": 37,
+      "description": "Implements redis template.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/RedisConfig.java",
+      "signature": "public RedisCacheConfiguration redisCacheConfiguration()",
+      "name": "redisCacheConfiguration",
+      "start_line": 40,
+      "end_line": 57,
+      "description": "Implements redis cache configuration.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/config/SecurityFilterConfig.java",
+      "signature": "public SecurityFilterChain filterChain(HttpSecurity http) throws Exception",
+      "name": "filterChain",
+      "start_line": 20,
+      "end_line": 30,
+      "description": "Implements filter chain.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> addStore(@RequestBody StoreDto.StoreRequest model)",
+      "name": "addStore",
+      "start_line": 42,
+      "end_line": 46,
+      "description": "Implements add store.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> updateStore(@PathVariable Integer storeId, @ModelAttribute StoreDto.StoreRequest model)",
+      "name": "updateStore",
+      "start_line": 59,
+      "end_line": 63,
+      "description": "Implements update store.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> deleteStore(@PathVariable Integer storeId)",
+      "name": "deleteStore",
+      "start_line": 67,
+      "end_line": 70,
+      "description": "Deletes or removes store.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> addStoreStaff(@PathVariable Integer storeId, @PathVariable Integer staffId)",
+      "name": "addStoreStaff",
+      "start_line": 91,
+      "end_line": 95,
+      "description": "Implements add store staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> updateStoreStaff(@PathVariable Integer storeId, @PathVariable Integer staffId)",
+      "name": "updateStoreStaff",
+      "start_line": 99,
+      "end_line": 103,
+      "description": "Implements update store staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/controller/StoreController.java",
+      "signature": "public ResponseEntity<Void> deleteStoreStaff(@PathVariable Integer storeId, @PathVariable Integer staffId)",
+      "name": "deleteStoreStaff",
+      "start_line": 107,
+      "end_line": 111,
+      "description": "Deletes or removes store staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/StoreServiceImpl.java",
+      "signature": "public void deleteStore(Integer storeId)",
+      "name": "deleteStore",
+      "start_line": 112,
+      "end_line": 114,
+      "description": "Deletes or removes store.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/service/StoreServiceImpl.java",
+      "signature": "public void removeStoreStaff(Integer storeId, Integer staffId)",
+      "name": "removeStoreStaff",
+      "start_line": 118,
+      "end_line": 119,
+      "description": "Deletes or removes store staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/repository/custom/CustomStoreRepositoryImpl.java",
+      "signature": "private static void replaceCountryIdToCountry(StoreDetailsDto.StoreDetails result)",
+      "name": "replaceCountryIdToCountry",
+      "start_line": 25,
+      "end_line": 30,
+      "description": "Implements replace country id to country.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 44,
+      "end_line": 50,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 53,
+      "end_line": 55,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 73,
+      "end_line": 79,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/CategorySalesDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 82,
+      "end_line": 84,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/InventoryDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 44,
+      "end_line": 52,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/InventoryDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 55,
+      "end_line": 57,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 36,
+      "end_line": 44,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 47,
+      "end_line": 49,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 67,
+      "end_line": 73,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 76,
+      "end_line": 78,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 50,
+      "end_line": 58,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 61,
+      "end_line": 63,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 84,
+      "end_line": 90,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 93,
+      "end_line": 95,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 113,
+      "end_line": 119,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 122,
+      "end_line": 124,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 46,
+      "end_line": 53,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 56,
+      "end_line": 58,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 76,
+      "end_line": 82,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/dto/StoreSalesDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 85,
+      "end_line": 87,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+      "signature": "public void update(InventoryEntity entity)",
+      "name": "update",
+      "start_line": 67,
+      "end_line": 71,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 74,
+      "end_line": 82,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/InventoryEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 85,
+      "end_line": 87,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java",
+      "signature": "public void update(StoreEntity entity)",
+      "name": "update",
+      "start_line": 68,
+      "end_line": 72,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 75,
+      "end_line": 83,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/store/domain/entity/StoreEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 86,
+      "end_line": 88,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "signature": "public ResponseEntity<Void> addStaff(@RequestBody StaffDto.StaffRequest model)",
+      "name": "addStaff",
+      "start_line": 39,
+      "end_line": 43,
+      "description": "Implements add staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "signature": "public ResponseEntity<Void> updateStaff(@PathVariable Integer staffId, @RequestBody StaffDto.StaffRequest model)",
+      "name": "updateStaff",
+      "start_line": 56,
+      "end_line": 60,
+      "description": "Implements update staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/controller/StaffController.java",
+      "signature": "public ResponseEntity<Void> deleteStaff(@PathVariable Integer staffId)",
+      "name": "deleteStaff",
+      "start_line": 64,
+      "end_line": 67,
+      "description": "Deletes or removes staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/service/StaffServiceImpl.java",
+      "signature": "public void removeStaff(Integer staffId)",
+      "name": "removeStaff",
+      "start_line": 71,
+      "end_line": 73,
+      "description": "Deletes or removes staff.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 79,
+      "end_line": 91,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 94,
+      "end_line": 96,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 114,
+      "end_line": 120,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 123,
+      "end_line": 125,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 76,
+      "end_line": 89,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 92,
+      "end_line": 97,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 137,
+      "end_line": 149,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 152,
+      "end_line": 155,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 173,
+      "end_line": 179,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 182,
+      "end_line": 184,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+      "signature": "public void update(StaffEntity entity)",
+      "name": "update",
+      "start_line": 104,
+      "end_line": 113,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 116,
+      "end_line": 129,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 132,
+      "end_line": 137,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "signature": "public ResponseEntity<Void> rentDvd(@RequestBody RentalDto.RentalCreateRequest model)",
+      "name": "rentDvd",
+      "start_line": 39,
+      "end_line": 46,
+      "description": "Implements rent dvd.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "signature": "public ResponseEntity<Void> updateRental(@PathVariable Integer rentalId, @ModelAttribute RentalDto.RentalUpdateRequest model)",
+      "name": "updateRental",
+      "start_line": 59,
+      "end_line": 63,
+      "description": "Implements update rental.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "signature": "public ResponseEntity<Void> deleteRental(@PathVariable Integer rentalId)",
+      "name": "deleteRental",
+      "start_line": 67,
+      "end_line": 70,
+      "description": "Deletes or removes rental.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/controller/RentalController.java",
+      "signature": "public ResponseEntity<Void> returnDvd(@RequestBody Map<String, String> input)",
+      "name": "returnDvd",
+      "start_line": 74,
+      "end_line": 80,
+      "description": "Implements return dvd.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/service/RentalServiceImpl.java",
+      "signature": "public BigDecimal getOverdueRentalList()",
+      "name": "getOverdueRentalList",
+      "start_line": 53,
+      "end_line": 55,
+      "description": "Retrieves overdue rental list.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/service/RentalServiceImpl.java",
+      "signature": "public BigDecimal getOverdueRental(Integer customerId)",
+      "name": "getOverdueRental",
+      "start_line": 59,
+      "end_line": 61,
+      "description": "Retrieves overdue rental.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/service/RentalServiceImpl.java",
+      "signature": "public void deleteRental(Integer rentalId)",
+      "name": "deleteRental",
+      "start_line": 133,
+      "end_line": 135,
+      "description": "Deletes or removes rental.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/repository/custom/CustomRentalRepositoryImpl.java",
+      "signature": "public RentalEntity findRentedDvdRentalId(Integer customerId, Integer inventoryId)",
+      "name": "findRentedDvdRentalId",
+      "start_line": 15,
+      "end_line": 24,
+      "description": "Finds rented dvd rental id.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 65,
+      "end_line": 76,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 79,
+      "end_line": 82,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 112,
+      "end_line": 121,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 124,
+      "end_line": 126,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 156,
+      "end_line": 165,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 168,
+      "end_line": 170,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 209,
+      "end_line": 215,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/dto/RentalDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 218,
+      "end_line": 220,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+      "signature": "public void update(RentalEntity entity)",
+      "name": "update",
+      "start_line": 93,
+      "end_line": 100,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 103,
+      "end_line": 114,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/rental/domain/entity/RentalEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 117,
+      "end_line": 119,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "signature": "public ResponseEntity<Void> updatePayment(@PathVariable Integer paymentId, @RequestBody PaymentDto.PaymentRequest model)",
+      "name": "updatePayment",
+      "start_line": 42,
+      "end_line": 46,
+      "description": "Implements update payment.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/controller/PaymentController.java",
+      "signature": "public ResponseEntity<Void> deletePayment(@PathVariable Integer paymentId)",
+      "name": "deletePayment",
+      "start_line": 50,
+      "end_line": 53,
+      "description": "Deletes or removes payment.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/service/PaymentServiceImpl.java",
+      "signature": "public void deletePayment(Integer paymentId)",
+      "name": "deletePayment",
+      "start_line": 84,
+      "end_line": 86,
+      "description": "Deletes or removes payment.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/repository/custom/CustomPaymentRepositoryImpl.java",
+      "signature": "private static void replaceCountryIdToCountry(StoreSalesDto.StoreSales result)",
+      "name": "replaceCountryIdToCountry",
+      "start_line": 30,
+      "end_line": 33,
+      "description": "Implements replace country id to country.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 66,
+      "end_line": 77,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 80,
+      "end_line": 83,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 113,
+      "end_line": 122,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 8
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 125,
+      "end_line": 127,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 145,
+      "end_line": 151,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/dto/PaymentDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 154,
+      "end_line": 156,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+      "signature": "public void update(PaymentEntity entity)",
+      "name": "update",
+      "start_line": 90,
+      "end_line": 97,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 100,
+      "end_line": 111,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/payment/domain/entity/PaymentEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 114,
+      "end_line": 117,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> addAddress(@RequestBody AddressDto.AddressRequest model)",
+      "name": "addAddress",
+      "start_line": 39,
+      "end_line": 43,
+      "description": "Implements add address.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> updateAddress(@PathVariable Integer addressId, @RequestBody AddressDto.AddressRequest model)",
+      "name": "updateAddress",
+      "start_line": 56,
+      "end_line": 60,
+      "description": "Implements update address.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> deleteAddress(@PathVariable Integer addressId)",
+      "name": "deleteAddress",
+      "start_line": 64,
+      "end_line": 67,
+      "description": "Deletes or removes address.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> addCity(@RequestBody CityDto.CityRequest model)",
+      "name": "addCity",
+      "start_line": 88,
+      "end_line": 92,
+      "description": "Implements add city.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> updateCity(@PathVariable Integer cityId, @RequestBody CityDto.CityRequest model)",
+      "name": "updateCity",
+      "start_line": 105,
+      "end_line": 109,
+      "description": "Implements update city.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/controller/LocationController.java",
+      "signature": "public ResponseEntity<Void> deleteCity(@PathVariable Integer cityId)",
+      "name": "deleteCity",
+      "start_line": 113,
+      "end_line": 116,
+      "description": "Deletes or removes city.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/service/LocationServiceImpl.java",
+      "signature": "public void deleteAddress(Integer addressId)",
+      "name": "deleteAddress",
+      "start_line": 75,
+      "end_line": 77,
+      "description": "Deletes or removes address.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/service/LocationServiceImpl.java",
+      "signature": "public void deleteCity(Integer cityId)",
+      "name": "deleteCity",
+      "start_line": 112,
+      "end_line": 114,
+      "description": "Deletes or removes city.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/CountryConverter.java",
+      "signature": "public Integer convertToDatabaseColumn(Country attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 10,
+      "end_line": 15,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/CountryConverter.java",
+      "signature": "public Country convertToEntityAttribute(Integer dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 18,
+      "end_line": 23,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/GeometryConverter.java",
+      "signature": "public byte[] convertToDatabaseColumn(Point point)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 16,
+      "end_line": 19,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/GeometryConverter.java",
+      "signature": "public Point convertToEntityAttribute(byte[] bytes)",
+      "name": "convertToEntityAttribute",
+      "start_line": 22,
+      "end_line": 33,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/LanguageConverter.java",
+      "signature": "public Integer convertToDatabaseColumn(Language attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 10,
+      "end_line": 15,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/converter/LanguageConverter.java",
+      "signature": "public Language convertToEntityAttribute(Integer dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 18,
+      "end_line": 24,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 67,
+      "end_line": 80,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 83,
+      "end_line": 86,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 127,
+      "end_line": 138,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 141,
+      "end_line": 144,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 162,
+      "end_line": 168,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 171,
+      "end_line": 173,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 46,
+      "end_line": 54,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 57,
+      "end_line": 59,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 81,
+      "end_line": 87,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 90,
+      "end_line": 92,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 110,
+      "end_line": 116,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CityDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 119,
+      "end_line": 121,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CountryDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 34,
+      "end_line": 41,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/CountryDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 44,
+      "end_line": 46,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/LanguageDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 31,
+      "end_line": 38,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/dto/LanguageDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 41,
+      "end_line": 43,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+      "signature": "public void update(AddressEntity entity)",
+      "name": "update",
+      "start_line": 89,
+      "end_line": 98,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 101,
+      "end_line": 114,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 117,
+      "end_line": 121,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CityEntity.java",
+      "signature": "public void update(CityEntity entity)",
+      "name": "update",
+      "start_line": 63,
+      "end_line": 67,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CityEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 70,
+      "end_line": 78,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CityEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 81,
+      "end_line": 83,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CountryEntity.java",
+      "signature": "public void update(CountryEntity entity)",
+      "name": "update",
+      "start_line": 49,
+      "end_line": 52,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CountryEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 55,
+      "end_line": 62,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/CountryEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 65,
+      "end_line": 67,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/LanguageEntity.java",
+      "signature": "public void update(LanguageEntity entity)",
+      "name": "update",
+      "start_line": 49,
+      "end_line": 52,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/LanguageEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 55,
+      "end_line": 62,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/location/domain/entity/LanguageEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 65,
+      "end_line": 67,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "signature": "public ResponseEntity<Void> addCustomer(@RequestBody CustomerDto.CustomerRequest model)",
+      "name": "addCustomer",
+      "start_line": 46,
+      "end_line": 50,
+      "description": "Implements add customer.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "signature": "public ResponseEntity<Void> updateCustomer(@PathVariable Integer customerId, @RequestBody CustomerDto.CustomerRequest model)",
+      "name": "updateCustomer",
+      "start_line": 63,
+      "end_line": 67,
+      "description": "Implements update customer.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/controller/CustomerController.java",
+      "signature": "public ResponseEntity<Void> deleteCustomer(@PathVariable Integer customerId)",
+      "name": "deleteCustomer",
+      "start_line": 71,
+      "end_line": 74,
+      "description": "Deletes or removes customer.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/service/CustomerServiceImpl.java",
+      "signature": "public void deleteCustomer(Integer customerId)",
+      "name": "deleteCustomer",
+      "start_line": 89,
+      "end_line": 91,
+      "description": "Deletes or removes customer.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 85,
+      "end_line": 98,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 12
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 101,
+      "end_line": 103,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 121,
+      "end_line": 127,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 130,
+      "end_line": 132,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 71,
+      "end_line": 82,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 10
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 85,
+      "end_line": 87,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 120,
+      "end_line": 130,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 9
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 133,
+      "end_line": 135,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 153,
+      "end_line": 159,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 162,
+      "end_line": 164,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+      "signature": "public void update(CustomerEntity entity)",
+      "name": "update",
+      "start_line": 96,
+      "end_line": 104,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 107,
+      "end_line": 119,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/customer/domain/entity/CustomerEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 122,
+      "end_line": 125,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "signature": "public ResponseEntity<Void> addActor(@RequestBody ActorDto.ActorRequest model)",
+      "name": "addActor",
+      "start_line": 51,
+      "end_line": 55,
+      "description": "Implements add actor.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "signature": "public ResponseEntity<Void> updateActor(@PathVariable Integer actorId, @RequestBody ActorDto.ActorRequest model)",
+      "name": "updateActor",
+      "start_line": 68,
+      "end_line": 72,
+      "description": "Implements update actor.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "signature": "public ResponseEntity<Void> deleteActor(@PathVariable Integer actorId)",
+      "name": "deleteActor",
+      "start_line": 76,
+      "end_line": 79,
+      "description": "Deletes or removes actor.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "signature": "public ResponseEntity<Void> addActorFilm(@PathVariable Integer actorId, @RequestBody Map<String, String> input)",
+      "name": "addActorFilm",
+      "start_line": 114,
+      "end_line": 119,
+      "description": "Implements add actor film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/ActorController.java",
+      "signature": "public ResponseEntity<Void> deleteActorFilm(@PathVariable Integer actorId, @PathVariable Integer filmId)",
+      "name": "deleteActorFilm",
+      "start_line": 138,
+      "end_line": 142,
+      "description": "Deletes or removes actor film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "signature": "public ResponseEntity<Void> addFilm(@RequestBody FilmDto.FilmRequest model)",
+      "name": "addFilm",
+      "start_line": 56,
+      "end_line": 60,
+      "description": "Implements add film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "signature": "public ResponseEntity<Void> updateFilm(@PathVariable Integer filmId, @RequestBody FilmDto.FilmRequest model)",
+      "name": "updateFilm",
+      "start_line": 73,
+      "end_line": 77,
+      "description": "Implements update film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/controller/FilmController.java",
+      "signature": "public ResponseEntity<Void> deleteFilm(@PathVariable Integer filmId)",
+      "name": "deleteFilm",
+      "start_line": 81,
+      "end_line": 84,
+      "description": "Deletes or removes film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/ActorServiceImpl.java",
+      "signature": "public void deleteActor(Integer actorId)",
+      "name": "deleteActor",
+      "start_line": 122,
+      "end_line": 124,
+      "description": "Deletes or removes actor.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/ActorServiceImpl.java",
+      "signature": "public void removeActorFilm(Integer actorId, Integer filmId)",
+      "name": "removeActorFilm",
+      "start_line": 128,
+      "end_line": 130,
+      "description": "Deletes or removes actor film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/FilmServiceImpl.java",
+      "signature": "public BigDecimal getFilmRentalPrice(Integer filmId)",
+      "name": "getFilmRentalPrice",
+      "start_line": 85,
+      "end_line": 91,
+      "description": "Retrieves film rental price.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/service/FilmServiceImpl.java",
+      "signature": "public void deleteFilm(Integer filmId)",
+      "name": "deleteFilm",
+      "start_line": 113,
+      "end_line": 115,
+      "description": "Deletes or removes film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/repository/custom/CustomActorRepositoryImpl.java",
+      "signature": "public void removeActorFilm(Integer actorId, Integer filmId)",
+      "name": "removeActorFilm",
+      "start_line": 133,
+      "end_line": 140,
+      "description": "Deletes or removes actor film.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/CategoryConverter.java",
+      "signature": "public Integer convertToDatabaseColumn(Category attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 10,
+      "end_line": 15,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/CategoryConverter.java",
+      "signature": "public Category convertToEntityAttribute(Integer dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 18,
+      "end_line": 23,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/FilmRatingConverter.java",
+      "signature": "public String convertToDatabaseColumn(FilmRating attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 10,
+      "end_line": 15,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/FilmRatingConverter.java",
+      "signature": "public FilmRating convertToEntityAttribute(String dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 18,
+      "end_line": 23,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/SpecialFeatureConverter.java",
+      "signature": "public String convertToDatabaseColumn(EnumSet<SpecialFeature> attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 14,
+      "end_line": 21,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/converter/SpecialFeatureConverter.java",
+      "signature": "public EnumSet<SpecialFeature> convertToEntityAttribute(String dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 24,
+      "end_line": 31,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 51,
+      "end_line": 59,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 7
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 62,
+      "end_line": 64,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 82,
+      "end_line": 88,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 91,
+      "end_line": 93,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 37,
+      "end_line": 44,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 47,
+      "end_line": 49,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 70,
+      "end_line": 76,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 79,
+      "end_line": 81,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 99,
+      "end_line": 105,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/ActorDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 108,
+      "end_line": 110,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/CategoryDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 34,
+      "end_line": 41,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/CategoryDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 44,
+      "end_line": 46,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 83,
+      "end_line": 95,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 11
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 98,
+      "end_line": 100,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 118,
+      "end_line": 124,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDetailsDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 127,
+      "end_line": 129,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 93,
+      "end_line": 110,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 113,
+      "end_line": 117,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 167,
+      "end_line": 182,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 14
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 185,
+      "end_line": 188,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 206,
+      "end_line": 212,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 215,
+      "end_line": 217,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 249,
+      "end_line": 256,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 259,
+      "end_line": 261,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 292,
+      "end_line": 299,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 302,
+      "end_line": 304,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 327,
+      "end_line": 334,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 337,
+      "end_line": 339,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 360,
+      "end_line": 367,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 370,
+      "end_line": 372,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+      "signature": "public boolean areAllFieldsNull()",
+      "name": "areAllFieldsNull",
+      "start_line": 375,
+      "end_line": 377,
+      "description": "Implements are all fields null.",
+      "cyclomatic_complexity": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+      "signature": "public void update(ActorEntity entity)",
+      "name": "update",
+      "start_line": 45,
+      "end_line": 48,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 51,
+      "end_line": 58,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/ActorEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 61,
+      "end_line": 63,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+      "signature": "public void update(CategoryEntity entity)",
+      "name": "update",
+      "start_line": 49,
+      "end_line": 52,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 55,
+      "end_line": 62,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/CategoryEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 65,
+      "end_line": 67,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+      "signature": "public void update(FilmActorEntity entity)",
+      "name": "update",
+      "start_line": 62,
+      "end_line": 66,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 69,
+      "end_line": 76,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 79,
+      "end_line": 81,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntityPK.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 31,
+      "end_line": 37,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmActorEntityPK.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 40,
+      "end_line": 42,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+      "signature": "public void update(FilmCategoryEntity entity)",
+      "name": "update",
+      "start_line": 63,
+      "end_line": 66,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 69,
+      "end_line": 76,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 79,
+      "end_line": 81,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntityPK.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 28,
+      "end_line": 34,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmCategoryEntityPK.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 37,
+      "end_line": 39,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+      "signature": "public void update(FilmEntity entity)",
+      "name": "update",
+      "start_line": 131,
+      "end_line": 144,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 147,
+      "end_line": 164,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 16
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 167,
+      "end_line": 170,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+      "signature": "public void update(FilmTextEntity entity)",
+      "name": "update",
+      "start_line": 43,
+      "end_line": 46,
+      "description": "Implements update.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 49,
+      "end_line": 56,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmTextEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 59,
+      "end_line": 61,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+      "signature": "protected LocalDateYearSerializer withFormat(Boolean useTimestamp, DateTimeFormatter dtf, JsonFormat.Shape shape)",
+      "name": "withFormat",
+      "start_line": 32,
+      "end_line": 34,
+      "description": "Implements with format.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+      "signature": "public void serialize(LocalDate date, JsonGenerator gen, SerializerProvider provider) throws IOException",
+      "name": "serialize",
+      "start_line": 37,
+      "end_line": 49,
+      "description": "Implements serialize.",
+      "cyclomatic_complexity": 4
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+      "signature": "public void serializeWithType(LocalDate value, JsonGenerator gen, SerializerProvider provider, TypeSerializer typeSer) throws IOException",
+      "name": "serializeWithType",
+      "start_line": 52,
+      "end_line": 62,
+      "description": "Implements serialize with type.",
+      "cyclomatic_complexity": 4
+    },
+    {
+      "file": "src/main/java/com/example/app/services/catalog/domain/serializer/LocalDateYearSerializer.java",
+      "signature": "protected void _serializeAsArrayContents(LocalDate value, JsonGenerator gen, SerializerProvider provider) throws IOException",
+      "name": "_serializeAsArrayContents",
+      "start_line": 64,
+      "end_line": 67,
+      "description": "Implements _serialize as array contents.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/controller/LoginController.java",
+      "signature": "public ResponseEntity<Void> userLogin(@RequestBody AuthorityDto.Login login)",
+      "name": "userLogin",
+      "start_line": 24,
+      "end_line": 32,
+      "description": "Implements user login.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/service/JpaUserDetailsService.java",
+      "signature": "public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException",
+      "name": "loadUserByUsername",
+      "start_line": 21,
+      "end_line": 28,
+      "description": "Implements load user by username.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/service/JpaUserDetailsService.java",
+      "signature": "public UserDetails findUser(String email, String password)",
+      "name": "findUser",
+      "start_line": 31,
+      "end_line": 37,
+      "description": "Finds user.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/service/SecurityService.java",
+      "signature": "public void authenticateToken(UserDetails user, String jwt)",
+      "name": "authenticateToken",
+      "start_line": 14,
+      "end_line": 17,
+      "description": "Implements authenticate token.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/converter/UserRoleConverter.java",
+      "signature": "public String convertToDatabaseColumn(EnumSet<UserRole> attribute)",
+      "name": "convertToDatabaseColumn",
+      "start_line": 14,
+      "end_line": 21,
+      "description": "Implements convert to database column.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/converter/UserRoleConverter.java",
+      "signature": "public EnumSet<UserRole> convertToEntityAttribute(String dbData)",
+      "name": "convertToEntityAttribute",
+      "start_line": 24,
+      "end_line": 31,
+      "description": "Implements convert to entity attribute.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 40,
+      "end_line": 45,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 4
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 48,
+      "end_line": 50,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 74,
+      "end_line": 79,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 4
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/dto/AuthorityDto.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 82,
+      "end_line": 84,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/entity/AuthorityEntity.java",
+      "signature": "public boolean equals(Object o)",
+      "name": "equals",
+      "start_line": 51,
+      "end_line": 58,
+      "description": "Implements equals.",
+      "cyclomatic_complexity": 6
+    },
+    {
+      "file": "src/main/java/com/example/app/services/auth/domain/entity/AuthorityEntity.java",
+      "signature": "public int hashCode()",
+      "name": "hashCode",
+      "start_line": 61,
+      "end_line": 63,
+      "description": "Implements hash code.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/constant/Country.java",
+      "signature": "public static String replaceCountryIdToCountryInString(String str)",
+      "name": "replaceCountryIdToCountryInString",
+      "start_line": 140,
+      "end_line": 149,
+      "description": "Implements replace country id to country in string.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/common/filter/MdcLoggingFilter.java",
+      "signature": "public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException",
+      "name": "doFilter",
+      "start_line": 12,
+      "end_line": 20,
+      "description": "Implements do filter.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationFilter.java",
+      "signature": "protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException",
+      "name": "doFilterInternal",
+      "start_line": 22,
+      "end_line": 31,
+      "description": "Implements do filter internal.",
+      "cyclomatic_complexity": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationFilter.java",
+      "signature": "protected boolean shouldNotFilter(HttpServletRequest request)",
+      "name": "shouldNotFilter",
+      "start_line": 34,
+      "end_line": 36,
+      "description": "Implements should not filter.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationProvider.java",
+      "signature": "public Authentication authenticate(Authentication authentication) throws AuthenticationException",
+      "name": "authenticate",
+      "start_line": 20,
+      "end_line": 36,
+      "description": "Implements authenticate.",
+      "cyclomatic_complexity": 3
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationProvider.java",
+      "signature": "public boolean supports(Class<?> authentication)",
+      "name": "supports",
+      "start_line": 39,
+      "end_line": 41,
+      "description": "Implements supports.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationToken.java",
+      "signature": "public Object getCredentials()",
+      "name": "getCredentials",
+      "start_line": 28,
+      "end_line": 30,
+      "description": "Retrieves credentials.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtAuthenticationToken.java",
+      "signature": "public Object getPrincipal()",
+      "name": "getPrincipal",
+      "start_line": 33,
+      "end_line": 35,
+      "description": "Retrieves principal.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtTokenProvider.java",
+      "signature": "public void init()",
+      "name": "init",
+      "start_line": 27,
+      "end_line": 29,
+      "description": "Implements init.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtTokenProvider.java",
+      "signature": "public String createToken(UserDetails user)",
+      "name": "createToken",
+      "start_line": 31,
+      "end_line": 40,
+      "description": "Creates or persists token.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/security/JwtTokenProvider.java",
+      "signature": "public Claims decodeToken(String token)",
+      "name": "decodeToken",
+      "start_line": 42,
+      "end_line": 47,
+      "description": "Implements decode token.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "public static BooleanExpression filterExpression(boolean condition, BooleanExpression expression)",
+      "name": "filterExpression",
+      "start_line": 9,
+      "end_line": 11,
+      "description": "Implements filter expression.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "private static <T extends Comparable<?>, U extends ComparableExpressionBase<T>> BooleanExpression equalExpression(U path, T value)",
+      "name": "equalExpression",
+      "start_line": 13,
+      "end_line": 15,
+      "description": "Implements equal expression.",
+      "cyclomatic_complexity": 2
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "public static <T extends Enum<T>> BooleanExpression filterEquals(EnumExpression<T> path, T value)",
+      "name": "filterEquals",
+      "start_line": 25,
+      "end_line": 27,
+      "description": "Implements filter equals.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "public static <T extends Enum<T>> BooleanExpression filterEquals(EnumPath<T> path, T value)",
+      "name": "filterEquals",
+      "start_line": 29,
+      "end_line": 31,
+      "description": "Implements filter equals.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "private static <T extends Comparable<?>> BooleanExpression betweenExpression(ComparableExpression<T> path, T start, T end)",
+      "name": "betweenExpression",
+      "start_line": 33,
+      "end_line": 43,
+      "description": "Implements between expression.",
+      "cyclomatic_complexity": 5
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "public static <T extends Comparable<?>> BooleanExpression filterBetween(DateTimeExpression<T> path, T start, T end)",
+      "name": "filterBetween",
+      "start_line": 45,
+      "end_line": 47,
+      "description": "Implements filter between.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/util/ExpressionUtils.java",
+      "signature": "public static <T extends Comparable<?>> BooleanExpression filterBetween(DateTimePath<T> path, T start, T end)",
+      "name": "filterBetween",
+      "start_line": 49,
+      "end_line": 51,
+      "description": "Implements filter between.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/dto/ErrorResponseDto.java",
+      "signature": "public static ProblemDetail of(ErrorCode errorCode)",
+      "name": "of",
+      "start_line": 7,
+      "end_line": 11,
+      "description": "Implements of.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+      "signature": "public void serialize(Object value, JsonGenerator gen, SerializerProvider provider) throws IOException",
+      "name": "serialize",
+      "start_line": 32,
+      "end_line": 34,
+      "description": "Implements serialize.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+      "signature": "public void serializeWithType(Object value, JsonGenerator gen, SerializerProvider serializers, TypeSerializer typeSer) throws IOException",
+      "name": "serializeWithType",
+      "start_line": 37,
+      "end_line": 41,
+      "description": "Implements serialize with type.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+      "signature": "public JsonNode getSchema(SerializerProvider provider, Type typeHint)",
+      "name": "getSchema",
+      "start_line": 44,
+      "end_line": 46,
+      "description": "Retrieves schema.",
+      "cyclomatic_complexity": 1
+    },
+    {
+      "file": "src/main/java/com/example/app/common/domain/serializer/NullToEmptyStringSerializer.java",
+      "signature": "public void acceptJsonFormatVisitor(JsonFormatVisitorWrapper visitor, JavaType typeHint) throws JsonMappingException",
+      "name": "acceptJsonFormatVisitor",
+      "start_line": 49,
+      "end_line": 51,
+      "description": "Implements accept json format visitor.",
+      "cyclomatic_complexity": 1
+    }
+  ],
+  "complexity_summary": {
+    "method_count": 273,
+    "highest_complexity_methods": [
+      {
+        "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 93,
+        "end_line": 110,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 16
+      },
+      {
+        "file": "src/main/java/com/example/app/services/catalog/domain/entity/FilmEntity.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 147,
+        "end_line": 164,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 16
+      },
+      {
+        "file": "src/main/java/com/example/app/services/catalog/domain/dto/FilmDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 167,
+        "end_line": 182,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 14
+      },
+      {
+        "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 76,
+        "end_line": 89,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 12
+      },
+      {
+        "file": "src/main/java/com/example/app/services/staff/domain/entity/StaffEntity.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 116,
+        "end_line": 129,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 12
+      },
+      {
+        "file": "src/main/java/com/example/app/services/location/domain/dto/AddressDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 67,
+        "end_line": 80,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 12
+      },
+      {
+        "file": "src/main/java/com/example/app/services/location/domain/entity/AddressEntity.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 101,
+        "end_line": 114,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 12
+      },
+      {
+        "file": "src/main/java/com/example/app/services/customer/domain/dto/CustomerDetailsDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 85,
+        "end_line": 98,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 12
+      },
+      {
+        "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDetailsDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 79,
+        "end_line": 91,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 11
+      },
+      {
+        "file": "src/main/java/com/example/app/services/staff/domain/dto/StaffDto.java",
+        "signature": "public boolean equals(Object o)",
+        "name": "equals",
+        "start_line": 137,
+        "end_line": 149,
+        "description": "Implements equals.",
+        "cyclomatic_complexity": 11
+      }
+    ]
+  },
+  "llm_chunk_summaries": [],
+  "limitations": [
+    "Regex method extraction is intentionally lightweight; JavaParser would improve accuracy for complex syntax.",
+    "Local complexity is approximate cyclomatic complexity based on control-flow keywords.",
+    "LLM summaries require OPENAI_API_KEY and the openai Python package."
+  ]
+}
